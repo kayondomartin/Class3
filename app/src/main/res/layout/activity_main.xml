@@ -26,7 +26,7 @@
         android:layout_width="225dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="76dp"
         android:ems="10"
         android:hint="Socket IP to connect to "
         android:inputType="textPersonName"
@@ -42,10 +42,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="140dp"
         android:text="Connect to Socket"
+        app:layout_constraintBottom_toTopOf="@+id/nextbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:text="Next"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="goToNext"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.ece.class3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText input01;
     private Button button01;
+    private Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         input01 = findViewById(R.id.input01);
         button01 = findViewById(R.id.button01);
+        nextButton = findViewById(R.id.nextbutton);
+
 
         button01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,5 +32,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+    }
+
+    public void goToNext(View v){
+       Intent intent = new Intent(MainActivity.this, InClass3_2.class);
+       startActivity(intent);
     }
 }
